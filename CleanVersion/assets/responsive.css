@@ -1,0 +1,138 @@
+/* General Responsive Fixes for Travel Site */
+
+/* 1. Universal Image Fluidity */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 2. Banner Style 1 Responsive Adjustments */
+@media (max-width: 1200px) {
+    .trv-banner-1-text-large,
+    .trv-banner-1-text-large-outline {
+        font-size: 100px !important; /* Scale down from potential desktop size */
+    }
+}
+
+@media (max-width: 991px) {
+    .trv-banner-1-text-large,
+    .trv-banner-1-text-large-outline {
+        font-size: 80px !important;
+    }
+    
+    /* Adjust floaters to not block text */
+    .trv-banner-rock-pic {
+        right: 0px !important;
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Main Banner Layout */
+    .trv-banner-1-wrap {
+        height: auto !important;
+        min-height: 100vh;
+        padding-bottom: 50px;
+    }
+
+    .trv-banner-1-overlay {
+        position: relative; /* Allow content to flow naturally */
+        padding-top: 120px; /* Space for sticky header */
+    }
+
+    /* Text resizing */
+    .trv-banner-1-text-mid {
+        text-align: center;
+    }
+
+    .trv-banner-1-text-large,
+    .trv-banner-1-text-large-outline {
+        font-size: 50px !important;
+        line-height: 1.1 !important;
+    }
+
+    .trv-banner-1-text-small {
+        font-size: 18px !important;
+        text-align: center;
+        display: block;
+    }
+
+    .trv-banner-text-detail {
+        font-size: 16px !important;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .trv-banner-btn {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Hide complex overlapping elements on mobile for clarity */
+    .lizard, 
+    .lizard-eye,
+    .trv-cloud-1,
+    .trv-cloud-2 {
+        display: none !important;
+    }
+
+    .trv-banner-rock-pic {
+        display: none !important;
+    }
+
+    /* Adjust Search Bar to Stack */
+    .trv-search-st1-wrap {
+        margin-top: 0px; 
+        padding: 30px 15px;
+    }
+
+    .trv-search-st1-column {
+        width: 100%;
+        margin-bottom: 15px;
+        border-right: none !important; /* Remove separators if they exist */
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+    }
+
+    .trv-search-st1-column-last {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .trv-search-st1-search-btn button {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+/* 3. Section Padding Fixes */
+@media (max-width: 768px) {
+    .section-full,
+    .trv-popular-destination,
+    .trv-we-recommend {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+
+    /* Fix Headings */
+    .trv-head-title {
+        font-size: 32px !important;
+        line-height: 1.2;
+    }
+    
+    .trv-head-discription {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+}
+
+/* 4. Swiper / Carousel Adjustments */
+@media (max-width: 575px) {
+    .swiper-slide {
+        width: 100% !important; /* Force full width on mobile cards */
+    }
+    
+    .trv-destination-bx1 .trv-media img {
+        height: 250px; /* Reasonable height for mobile cards */
+    }
+}
