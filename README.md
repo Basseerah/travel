@@ -1,39 +1,42 @@
-# Travlla - Premium Travel & Tour Agency Template
+# Travlla - Premium Travel Application (Refactored)
 
-Travlla is a high-end, responsive travel and tour agency website template designed for a premium user experience. It features modern animations, smooth carousels, and a clean, professional aesthetic.
+A modern, high-performance travel agency landing page built with a focus on premium aesthetics and robust architecture. This project has undergone a significant refactor to improve maintainability, visual consistency, and performance.
 
-## 🚀 Recent Improvements & Fixes
+## 🚀 Key Dev Updates
 
-We have recently upgraded this template with several structural and visual enhancements:
+### 1. Architectural Refactoring & Project Cleanup
+- **Directory Restructuring**: Consolidated a cluttered root directory into a standard `assets/` architecture (`assets/images/`, `assets/css/`, `assets/js/`).
+- **Orphan File Removal**: Cleaned up over 100+ redundant asset files, cache downloads, and legacy "CleanVersion" backups to ensure a lean production-ready codebase.
+- **Path Integrity**: Standardized all asset referencing in `index.html` to maintain stability across different environments.
 
-- **Carousel Refactoring**: Fixed the structural issues in the "Brands Trust Us" and "Popular Search Destination" carousels. Removed redundant "cloned" HTML elements that were causing layout jumps.
-- **Premium Styling**: 
-    - Restored high-quality Google Fonts (`Afacad`, `Figtree`, `Kaushan Script`).
-    - Enhanced Brand Logo visibility (opacity increased to 80% with smooth hover effects).
-- **Responsive Fallbacks**: Implemented Flexbox-based fallback layouts for carousels to ensure the site remains functional and beautiful even if JavaScript fails.
-- **Project Reorganization**: Consolidated all assets into a clean `assets/` directory (`css`, `js`, `images`) and removed redundant files for better maintainability.
+### 2. Carousel System Optimization (Owl Carousel & Swiper)
+- **DOM Stability Fix**: Resolved critical issues where JavaScript-cloned elements were breaking the layout hierarchy.
+- **Improved Rendering**: Removed pre-calculated inline styles from the source HTML, allowing the carousel engines to initialize cleanly without "jumps."
+- **CSS Fallbacks**: Implemented Flexbox-based layout fallbacks to prevent vertical stacking during high latent loading or if JS is disabled.
 
-## 🛠️ Technology Stack
+### 3. Visual & Aesthetic Enhancements
+- **Typography Restoration**: Properly integrated and mapped premium Google Fonts (`Afacad`, `Figtree`, `Kaushan Script`) for a consistent design system.
+- **Brand Presentation**: Refined the 'Brands Trust Us' section with 80% opacity layering and micro-interactions for a more sophisticated look.
+- **Global Assets**: Restored site FavIcons and Logos from fragmented temporary paths to persistent local storage.
 
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **CSS Framework**: Bootstrap 5
-- **Animations**: GSAP (GreenSock Animation Platform)
-- **Carousels**: Owl Carousel & Swiper
-- **Icons**: Bootstrap Icons & FontAwesome
-- **Interactions**: Custom Cursor & Parallax effects
-- **Utilities**: jQuery 3.7.1, Magnific Popup
+## 🛠 Tech Stack & Integration
+- **Core**: HTML5, CSS3, Vanilla JS
+- **UI Framework**: Bootstrap 5 (Grid & Components)
+- **Motion**: GSAP (GreenSock) for high-end cursor and parallax animations.
+- **Engines**: 
+  - `Owl Carousel 2` for standard sliders.
+  - `Swiper.js` for premium touch-enabled tour carousels.
+  - `Magnific Popup` for video and gallery lightbox integration.
 
 ## 📂 Project Structure
-
 ```text
-/
-├── index.html          # Main homepage (recent version with all fixes)
-└── assets/
-    ├── css/            # Stylesheets (style.css, responsive.css, etc.)
-    ├── js/             # Scripts (custom.js, plugins, etc.)
-    └── images/         # Optimized images and brand logos
+.
+├── index.html           # Main entry point (fully refactored)
+└── assets/              # Consolidated production assets
+    ├── css/             # Minified & custom stylesheets
+    ├── images/          # Optimized production media
+    └── js/              # Plugin initialization & custom logic
 ```
 
-## 🎨 Design Philosophy
-
-Travlla is designed to feel **premium** and **premiumly responsive**. The use of vibrant color palettes, subtle micro-animations, and high-quality typography ensures a state-of-the-art impression for every visitor.
+---
+*Developed with a focus on premium user experience and clean code standards.*
